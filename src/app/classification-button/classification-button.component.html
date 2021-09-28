@@ -1,0 +1,53 @@
+<h1>Hello this is for midnight project</h1>
+<div class="card">
+  <div class="card-header">
+    <h2>List of Players </h2>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">ID</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let player of show">
+        <tr>
+          <td>{{player.name}}</td>
+          <td>{{player.id}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary "  (click)="showAll()">All</button>
+    <button class="btn btn-primary "  (click)="showPro()">Ama</button>
+    <button class="btn btn-primary "  (click)="showAma()">Pro</button>
+  </div>
+</div>
+<style>
+  h1{
+    text-align: center;
+  }
+    h4{
+        font-family:Haettenschweiler;
+        font-weight: 300;
+    }
+    .card-header{
+        background-color:#8be0ff;
+    }
+    .card-footer{
+        background-color:#8be0ff;
+    }
+    .card-body{
+        background-color:#a6cddb;
+    }
+    .card-footer button{
+        float: right;
+        margin-left: 2%;
+    }
+    .table{
+      background-color: rgb(71, 204, 160);
+    }
+</style>
